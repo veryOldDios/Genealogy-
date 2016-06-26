@@ -2,12 +2,16 @@ program Genealogy;
 
 uses
   Forms,
-  UntMainFrm in 'UntMainFrm.pas' {Form1};
+  UntMainFrm in 'UntMainFrm.pas' {CoverFrm},
+  UntHomePageFrm in 'UntHomePageFrm.pas' {HomePageFrm},
+  UntAddGenealogyFrm in 'UntAddGenealogyFrm.pas' {AddGenealogyFrm};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TCoverFrm, CoverFrm);
+  Application.CreateForm(THomePageFrm, HomePageFrm);
+  Application.CreateForm(TAddGenealogyFrm, AddGenealogyFrm);
   Application.Run;
 end.
